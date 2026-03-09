@@ -10,6 +10,7 @@ import {DUMMY_USERS} from '../../dummy-users';
 export class UserComponent {
   @Input({required:true}) user!: User
   @Output() select = new EventEmitter<string>();
+  @Input({required:true}) selected!: boolean;
   // avatar = input.required()
   // name = input.required()
 
