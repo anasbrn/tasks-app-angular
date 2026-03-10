@@ -1,8 +1,12 @@
+@if (isAddingTask) {
+  <app-new-task (cancel)="handleCloseModalTask()" (add)="onAddTask($event)"></app-new-task>
+}
+
 <section id="tasks">
   <header>
     <h2>{{ name }}' Tasks</h2>
     <menu>
-      <button>Add a task</button>
+      <button (click)="handleAddingTask()">Add a task</button>
     </menu>
   </header>
 
